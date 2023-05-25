@@ -86,7 +86,7 @@ function App() {
           <div className="mb-4">
             <label>
               <input
-                checked={true}
+                checked={"ja" === selectValue}
                 type="radio"
                 value="ja"
                 name="sample"
@@ -97,6 +97,7 @@ function App() {
             <br />
             <label>
               <input
+                checked={"en" === selectValue}
                 type="radio"
                 value="en"
                 name="sample"
@@ -112,7 +113,6 @@ function App() {
               value={option}
               onChange={(value) => {
                 value && setOption(value);
-                console.log(value);
               }}
               options={options}
               placeholder="検索したいポケモンを入力してください"
